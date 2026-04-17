@@ -4,6 +4,7 @@ import './App.css'
 import TodoBtn from './component/TodoBtn'
 import type { Filter,  Todo } from './types/todo';
 import TodoList from './component/TodoList';
+import AddTodo from './component/AddTodo';
 
 
 
@@ -20,8 +21,9 @@ function App() {
   return (
     <div>
         <h1>Todo</h1>
+        <AddTodo todos={todos} setTodos={setTodos} />
         <TodoBtn filter={filter} setFilter={setFilter} />
-        <TodoList todos={todos} filter={filter} />
+        <TodoList todos={todos} setTodos={setTodos} filter={filter} />
     </div>
   )
 }

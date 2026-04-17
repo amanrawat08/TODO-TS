@@ -1,14 +1,14 @@
-
-const TodoBtn = () => {
+ 
+const TodoBtn = ({filter,setFilter}: {filter: Filter, setFilter: (filter: Filter) => void}) => {
   return (
     <div>
-      <button>
+      <button onClick={() => setFilter("ALL")}    >
             All
       </button>
-      <button>
+      <button onClick={() => setFilter("PENDING")}>
             Pending
       </button>
-      <button>
+      <button onClick={() => setFilter("COMPLETED")}>
             Completed
       </button>
     </div>

@@ -47,6 +47,12 @@ const TodoList = ({
               ) : (
                 <input type="checkbox" name={todo.id} id={todo.id} checked />
               )}
+
+              <button onClick={() => setTodos(todos.filter((t) => t.id !== todo.id))}>
+                Delete
+              </button>
+
+
             </li>
           ))}
       </ul>
